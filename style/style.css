@@ -71,6 +71,9 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+body {
+    background: url('../images/slide1.jpg') no-repeat #25292D;
+}
 .wrapper,
 .wrapper-slider,
 .footer-home {
@@ -111,26 +114,38 @@ a:hover                        { text-decoration:none; }
     overflow: hidden;
     position: relative;
     z-index: 10;
+    margin-bottom: 20px;
 }
-    .main-logo {
+    .main-logo,
+    .main-logo-home {
         margin-top: 35px;
+    }
+    .main-logo-inner {
+        margin-top: 25px;
     }
     .main-nav {
         padding-top: 45px;
         text-align: center;
     }
-        .main-nav li {
+    .main-nav-inner {
+        padding-top: 35px;
+        text-align: center;
+    }
+        .main-nav li,
+        .main-nav-inner li {
             display: inline-block;
             margin: 0 14px;
         }
-            .main-nav li a {
+            .main-nav li a,
+            .main-nav-inner li a {
                 color: #fff;
                 font: 13px 'PT_Sans-Narrow-Web-Regular';
                 text-transform: uppercase;
                 text-decoration: none;
                 letter-spacing: 2px;
             }
-            .main-nav li a:hover {
+            .main-nav li a:hover,
+            .main-nav-inner li a:hover {
                 color: #7ecefd;
             }
 
@@ -139,6 +154,7 @@ a:hover                        { text-decoration:none; }
     }
         .tel-header {
             margin-bottom: 5px;
+            padding-left: 20px;
             font: 18px "PT_Sans-Narrow-Web-Bold";
             color: #fff;
             background: url("../images/header/tel_icon.png") no-repeat left center;
@@ -154,13 +170,25 @@ a:hover                        { text-decoration:none; }
             cursor: pointer;
         }
 /*----------------------------------------------------------------------------------*/
-/*-------------------------------------NAV------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-
-/*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+.content {
+    padding: 30px;
+    background: #fff;
+}
+    .bread-crumbs {
+        overflow: hidden;
+    }
+        .bread-crumbs li {
+            float: left;
+        }
+            .bread-crumbs li a {
+                color: #262626;
+                font-size: 12px;
+            }
+            .bread-crumbs li:first-child a {
+                color: #999;
+            }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -359,4 +387,11 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 .no-valid-email_js {
     border-color: #DB0000;
+}
+.pos-rel-top {
+    position: relative;
+    top: 3px;
+}
+.mar-right-20 {
+    margin-right: 20px;
 }
