@@ -50,30 +50,27 @@ $(document).ready(function(){
     var callFormHomeHeader = $('#call-back-header'),
         form = $('#form-header-home');
     popupWindow(callFormHomeHeader, form);
-
-    var callFormHomeInnerPage = $('.call-inner');
-    popupWindow(callFormHomeInnerPage, form);
     /*end*/
 
     /*valid email*/
     form.submit(function(e){
         var nameValid = $('.input-callback[name^=your-name]'),
             telValid = $('.input-callback[name^=tel]');
-        if(nameValid.val() == '' || nameValid.val() == ' ' ||
-           telValid.val() == '' || telValid.val() == ' ') {
+        if(nameValid.val().length < 6 ||
+           telValid.val().length < 6) {
             e.preventDefault();
 
             $('#submit-form-popup_js').css('backgroundColor','#ccc');
-            if(nameValid.val() == '' || nameValid.val() == ' ') {
+            if(nameValid.val().length < 6) {
                 nameValid.addClass('no-valid-email_js');
             }
-            if(telValid.val() == '' || telValid.val() == ' ') {
+            if(telValid.val().length < 6) {
                 telValid.addClass('no-valid-email_js');
             }
 
             nameValid.blur(function(){
-                if(nameValid.val() != '' && nameValid != ' ') {
-                    if(telValid.val() != '' && telValid != ' ') {
+                if(nameValid.val().length > 5) {
+                    if(telValid.val().length > 5) {
                         $('#submit-form-popup_js').css('backgroundColor', '#1D75AC');
                     }
                     nameValid.removeClass('no-valid-email_js');
@@ -84,8 +81,8 @@ $(document).ready(function(){
                 }
             });
             telValid.blur(function(){
-                if(telValid.val() != '' && telValid != ' ') {
-                    if(nameValid.val() != '' && nameValid != ' ') {
+                if(telValid.val().length > 5) {
+                    if(nameValid.val().length > 5) {
                         $('#submit-form-popup_js').css('backgroundColor', '#1D75AC');
                     }
                     telValid.removeClass('no-valid-email_js');
@@ -99,4 +96,32 @@ $(document).ready(function(){
 
     });
     /*end*/
+
+    /* Placeholder for IE */
+    if($.browser.msie) { // Условие для вызова только в IE
+        $("form").find("input[type='text'], textarea").each(function() {
+            var tp = $(this).attr("placeholder");
+            $(this).attr('value',tp).css('color','#ccc');
+        }).focusin(function() {
+            var val = $(this).attr('placeholder');
+            if($(this).val() == val) {
+                $(this).attr('value','').css('color','#303030');
+            }
+        }).focusout(function() {
+            var val = $(this).attr('placeholder');
+            if($(this).val() == "") {
+                $(this).attr('value', val).css('color','#ccc');
+            }
+        });
+
+        /* Protected send form */
+        $("form").submit(function() {
+            $(this).find("input[type='text']").each(function() {
+                var val = $(this).attr('placeholder');
+                if($(this).val() == val) {
+                    $(this).attr('value','');
+                }
+            })
+        });
+    }
 });
