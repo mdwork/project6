@@ -38,14 +38,67 @@ a:hover                        { text-decoration:none; }
 .clearfix:after                { content: ""; display: block; clear: both; visibility: hidden;}
 .clearfix                      { display: inline-block; }
 /*----------------------------------------------------------------------------------*/
+/*-------------------------------------FONTS----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: "NotoSans-Bold";
+    src: url("../fonts/NotoSans-Bold.eot");
+    src: url("../fonts/NotoSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSans-Bold.woff") format("woff"), url("../fonts/NotoSans-Bold.ttf") format("truetype"), url("../fonts/NotoSans-Bold.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NotoSans-Regular";
+    src: url("../fonts/NotoSans-Regular.eot");
+    src: url("../fonts/NotoSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSans-Regular.woff") format("woff"), url("../fonts/NotoSans-Regular.ttf") format("truetype"), url("../fonts/NotoSans-Regular.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PT_Sans-Narrow-Web-Bold";
+    src: url("../fonts/PT_Sans-Narrow-Web-Bold.eot");
+    src: url("../fonts/PT_Sans-Narrow-Web-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans-Narrow-Web-Bold.woff") format("woff"), url("../fonts/PT_Sans-Narrow-Web-Bold.ttf") format("truetype"), url("../fonts/PT_Sans-Narrow-Web-Bold.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PT_Sans-Narrow-Web-Regular";
+    src: url("../fonts/PT_Sans-Narrow-Web-Regular.eot");
+    src: url("../fonts/PT_Sans-Narrow-Web-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans-Narrow-Web-Regular.woff") format("woff"), url("../fonts/PT_Sans-Narrow-Web-Regular.ttf") format("truetype"), url("../fonts/PT_Sans-Narrow-Web-Regular.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+/*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.wrapper {
+.wrapper,
+.wrapper-slider {
     position: relative;
     z-index: 10;
     width: 1000px;
     margin: 0 auto;
 }
+.wrapper {
+    z-index: 15;
+    height: 100%;
+}
+    .bg-big-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -53,6 +106,50 @@ a:hover                        { text-decoration:none; }
     position: relative;
     z-index: 10;
 }
+    .main-logo {
+        float: left;
+        margin-top: 35px;
+    }
+    .main-nav {
+        padding-top: 45px;
+        text-align: center;
+    }
+        .main-nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+            .main-nav li a {
+                color: #fff;
+                font: 13px 'PT_Sans-Narrow-Web-Regular';
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 2px;
+            }
+            .main-nav li a:hover {
+                color: #7ecefd;
+            }
+
+    .box-call-back {
+        float: right;
+        margin-top: 25px;
+    }
+        .tel-header {
+            display: block;
+            margin-bottom: 5px;
+            font: 18px "PT_Sans-Narrow-Web-Bold";
+            color: #fff;
+            background: url("../images/header/tel_icon.png") no-repeat left center;
+            text-align: right;
+        }
+        #call-back-header {
+            padding: 10px 12px;
+            background: none;
+            color: #fff;
+            font: 12px "NotoSans-Regular";
+            border: 1px solid #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------NAV------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -68,3 +165,56 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.footer-home {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
+    .scroll-icon {
+        display: block;
+        margin-bottom: 30px;
+        padding: 58px 0;
+        color: #fff;
+        background: url("../images/footer/scroll_icon.png") no-repeat center;
+        font: 13px "PT_Sans-Narrow-Web-Regular";
+        opacity: 0.6;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        word-spacing: 40px;
+    }
+    .copyright-home {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font: 13px 'PT_Sans-Narrow-Web-Regular';
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SLIDER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper-slider {
+    position: relative;
+    height: 100%;
+}
+    .box-main-header {
+        position: absolute;
+        top: 43%;
+        left: 0;
+        width: 100%;
+    }
+        .header-company {
+            color: #7ecefd;
+            font: 60px "PT_Sans-Narrow-Web-Bold";
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 10px;
+        }
+        .sub-header-company {
+            display: block;
+            text-align: center;
+            font: 24px "PT_Sans-Narrow-Web-Bold";
+            color: #fff;
+        }

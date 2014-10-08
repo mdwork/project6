@@ -2,19 +2,102 @@
 <html>
 
 <head>
-    <title>fullPage.js One Page Scroll Sites</title>
+    <title>Главная</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Resource-type" content="Document" />
 
     <link rel="stylesheet" type="text/css" href="style/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="style/examples.css" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
 
-    <!--[if IE]>
-    <script type="text/javascript">
-        var console = { log: function() {} };
-    </script>
-    <![endif]-->
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="main-logo">
+                <a href="#">
+                    <img src="images/header/main-logo.png">
+                </a>
+            </h1>
+
+            <div class="box-call-back">
+                <span class="tel-header">+7 4012 36-33-22</span>
+                <input id="call-back-header" type="button" value="Перезвоните мне">
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="#">О компании</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Услуги</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Объекты</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Вакансии</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Статьи</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </header><!--end HEADER-->
+
+        <footer class="footer-home">
+            <span class="scroll-icon">Пользуйтесь скроллом</span>
+            <span class="copyright-home">&copy; ООО "СК ГлавРемСтрой", 2006-2014</span>
+        </footer>
+    </div><!--end WRAPPER-->
+
+    <!--SLIDER-FULL-WINDOW-->
+    <ul id="menu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage"></a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage"></a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage"></a></li>
+        <li data-menuanchor="4thpage"><a href="#4thpage"></a></li>
+    </ul>
+
+
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="overlay"></div>
+            <img class="bg-big-slider" src="images/slide1.jpg">
+
+            <div class="wrapper-slider">
+                <div class="box-main-header">
+                    <h2 class="header-company">ООО "ГлавРемСтрой"</h2>
+                    <span class="sub-header-company">Строим, ремонтируем и обслуживаем от души</span>
+                </div>
+            </div><!--end WRAPPER-SLIDER-->
+        </div>
+
+        <div class="section" id="section1">
+            <div class="overlay"></div>
+            <img class="bg-big-slider" src="images/slide2.jpg">
+        </div>
+
+        <div class="section" id="section2">
+            <div class="overlay"></div>
+            <img class="bg-big-slider" src="images/slide3.jpg">
+        </div>
+
+        <div class="section" id="section3">
+            <div class="overlay"></div>
+            <img class="bg-big-slider" src="images/slide4.jpg">
+        </div>
+    </div>
+    <!--end SLIDER-FULL-WINDOW-->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
@@ -31,45 +114,5 @@
 
         });
     </script>
-</head>
-
-<body>
-    <div class="wrapper">
-        <header class="header">
-            <h1 class="main-logo">
-                <a href="#">
-                    <img src="images/header/main-logo.png">
-                </a>
-            </h1>
-        </header><!--end HEADER-->
-    </div><!--end WRAPPER-->
-
-    <!--SLIDER-FULL-WINDOW-->
-    <ul id="menu">
-        <li data-menuanchor="firstPage" class="active"><a href="#firstPage"></a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage"></a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage"></a></li>
-        <li data-menuanchor="4thpage"><a href="#4thpage"></a></li>
-    </ul>
-
-
-    <div id="fullpage">
-        <div class="section " id="section0">
-
-        </div>
-
-        <div class="section" id="section1">
-
-        </div>
-
-        <div class="section" id="section2">
-
-        </div>
-
-        <div class="section" id="section3">
-
-        </div>
-    </div>
-    <!--end SLIDER-FULL-WINDOW-->
 </body>
 </html>

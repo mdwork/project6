@@ -9,13 +9,16 @@
     position: absolute !important;
     width: 100%;
 }
+#section0,
+#section1,
+#section2,
+#section3 {
+    background: #fff !important;
+}
 .intro p{
 	width: 50%;
 	margin: 0 auto;
 	font-size: 1.5em;
-}
-.section{
-	text-align:center;
 }
 #menu li {
 	display:block;
