@@ -79,7 +79,7 @@ a:hover                        { text-decoration:none; }
     margin: 0 auto;
 }
 .wrapper {
-    z-index: 15;
+    z-index: 7;
     height: 100%;
 }
     .bg-big-slider {
@@ -90,7 +90,8 @@ a:hover                        { text-decoration:none; }
         width: 100%;
         height: 100%;
     }
-    .overlay {
+    .overlay,
+    .overlay-foto {
         position: absolute;
         top: 0;
         left: 0;
@@ -196,13 +197,12 @@ a:hover                        { text-decoration:none; }
 /*-------------------------------------SLIDER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .wrapper-slider {
-    position: relative;
-    height: 100%;
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    max-height: 100%;
 }
     .box-main-header {
-        position: absolute;
-        top: 43%;
-        left: 0;
         width: 100%;
     }
         .header-company {
@@ -217,4 +217,57 @@ a:hover                        { text-decoration:none; }
             text-align: center;
             font: 24px "PT_Sans-Narrow-Web-Bold";
             color: #fff;
+        }
+.wrap-inner-slider {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    max-height: 100%;
+    z-index: 10;
+}
+    .box-inner-header {
+        width: 1000px;
+        margin: 0 auto;
+    }
+        .wrap-foto-slider-home {
+            position: relative;
+            float: left;
+            margin-left: 50px;
+        }
+        .wrap-foto-slider-home:hover .bt-callback-blue {
+            display: block;
+        }
+        .wrap-foto-slider-home:hover img {
+            opacity: 0.5;
+        }
+
+            .overlay-foto {
+                display: none;
+            }
+            .bt-callback-blue {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                display: none;
+                margin: -19px 0 0 -85px;
+                padding: 10px 20px;
+                background: #2185C5;
+                text-transform: uppercase;
+                color: #fff;
+                font: 14px "PT_Sans-Narrow-Web-Bold";
+                border: none;
+                cursor: pointer;
+                letter-spacing: 2px;
+            }
+            .bt-callback-blue:hover {
+                background: #1D75AC;
+            }
+
+        .header-inner-slider {
+            float: right;
+            width: 500px;
+            margin: 75px 10px 0 0;
+            font: 60px "PT_Sans-Narrow-Web-Bold";
+            color: #7ecefd;
+            text-transform: uppercase;
         }
