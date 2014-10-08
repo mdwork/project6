@@ -72,7 +72,8 @@ a:hover                        { text-decoration:none; }
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .wrapper,
-.wrapper-slider {
+.wrapper-slider,
+.footer-home {
     position: relative;
     z-index: 10;
     width: 1000px;
@@ -81,6 +82,10 @@ a:hover                        { text-decoration:none; }
 .wrapper {
     z-index: 7;
     height: 100%;
+}
+.empty-box-home {
+    height: 185px;
+    width: 100%;
 }
     .bg-big-slider {
         position: absolute;
@@ -103,11 +108,11 @@ a:hover                        { text-decoration:none; }
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .header {
+    overflow: hidden;
     position: relative;
     z-index: 10;
 }
     .main-logo {
-        float: left;
         margin-top: 35px;
     }
     .main-nav {
@@ -130,11 +135,9 @@ a:hover                        { text-decoration:none; }
             }
 
     .box-call-back {
-        float: right;
         margin-top: 25px;
     }
         .tel-header {
-            display: block;
             margin-bottom: 5px;
             font: 18px "PT_Sans-Narrow-Web-Bold";
             color: #fff;
@@ -166,8 +169,7 @@ a:hover                        { text-decoration:none; }
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .footer-home {
-    position: absolute;
-    bottom: 15px;
+    margin-top: -185px;
     width: 100%;
 }
     .scroll-icon {
