@@ -124,4 +124,16 @@ $(document).ready(function(){
             })
         });
     }
+    /*end*/
+
+    /*number page*/
+    $('.list-article-service li').each(function(i){
+        if(i < 9) {
+            $(this).find('.count-article').text('0' + (i + 1));
+        }
+        else {
+            $(this).find('.count-article').text(1 + i);
+        }
+    });
+    /*end*/
 });

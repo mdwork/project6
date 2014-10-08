@@ -55,6 +55,13 @@ a:hover                        { text-decoration:none; }
     font-style: normal;
 }
 @font-face {
+    font-family: "NotoSans-Italic";
+    src: url("../fonts/notosans-italic.eot");
+    src: url("../fonts/notosans-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-italic.woff") format("woff"), url("../fonts/NotoSans-Italic.ttf") format("truetype"), url("../fonts/notosans-italic.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: "PT_Sans-Narrow-Web-Bold";
     src: url("../fonts/PT_Sans-Narrow-Web-Bold.eot");
     src: url("../fonts/PT_Sans-Narrow-Web-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PT_Sans-Narrow-Web-Bold.woff") format("woff"), url("../fonts/PT_Sans-Narrow-Web-Bold.ttf") format("truetype"), url("../fonts/PT_Sans-Narrow-Web-Bold.svg#") format("svg");
@@ -68,27 +75,45 @@ a:hover                        { text-decoration:none; }
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Raavi";
+    src: url("../fonts/raavi.eot");
+    src: url("../fonts/raavi.eot?#iefix") format("embedded-opentype"), url("../fonts/raavi.woff") format("woff"), url("../fonts/raavi.ttf") format("truetype"), url("../fonts/raavi.svg#") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 body {
-    background: url('../images/slide1.jpg') no-repeat #25292D;
+    background: url('../images/bg_inner_page.jpg') no-repeat #25292D;
+    background-size: 100% 100%;
 }
 .wrapper,
 .wrapper-slider,
+.wrapper-inner-page,
 .footer-home {
     position: relative;
     z-index: 10;
     width: 1000px;
     margin: 0 auto;
 }
-.wrapper {
+.wrapper,
+.wrapper-inner-page {
     z-index: 7;
-    height: 100%;
+    min-height: 100%;
+    margin-bottom: -185px;
 }
+.wrapper-inner-page {
+    margin-bottom: -95px;
+}
+.empty-box-inner-page,
 .empty-box-home {
     height: 185px;
     width: 100%;
+}
+.empty-box-inner-page {
+    height: 95px;
 }
     .bg-big-slider {
         position: absolute;
@@ -173,21 +198,111 @@ body {
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .content {
+    overflow: hidden;
+    display: block;
     padding: 30px;
     background: #fff;
 }
     .bread-crumbs {
         overflow: hidden;
+        margin-bottom: 40px;
     }
         .bread-crumbs li {
             float: left;
+            margin-left: 3px;
+        }
+        .bread-crumbs li:first-child {
+            margin-left: 0;
+        }
+        .bread-crumbs li:first-child a:before {
+            display: none;
         }
             .bread-crumbs li a {
                 color: #262626;
-                font-size: 12px;
+                font: 12px "PT_Sans-Narrow-Web-Regular";
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-decoration: none;
             }
-            .bread-crumbs li:first-child a {
+            .bread-crumbs li a:before {
+                content: '/';
+                display: inline-block;
+                margin-right: 3px;
+            }
+            .bread-crumbs li:first-child a,
+            .bread-crumbs li a:hover {
                 color: #999;
+            }
+    .main-header-inner-page {
+        font: 24px "PT_Sans-Narrow-Web-Bold";
+        color: #2185c5;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .list-article-service {
+        overflow: hidden;
+        width: 960px;
+    }
+        .list-article-service li {
+            overflow: hidden;
+            position: relative;
+            float: left;
+            width: 460px;
+            height: 180px;
+            margin-right: 20px;
+            margin-bottom: 60px;
+        }
+        .list-article-service li:hover .wrap-decription-article {
+            border-color: #FFE5B0;
+        }
+        .list-article-service li:hover .count-article {
+            color: #FFE5B0;
+        }
+            .wrap-decription-article {
+                height: 90px;
+                border: 4px solid #FFF4DE;
+            }
+                .decription-article-service {
+                    float: left;
+                    margin: 6px 0 0 15px;
+                    width: 145px;
+                    color: #2185c5;
+                    font: 13px "PT_Sans-Narrow-Web-Bold";
+                    text-transform: uppercase;
+                    line-height: 2;
+                    letter-spacing: 2px;
+                }
+                .count-article {
+                    float: right;
+                    margin: 20px 15px 0 0;
+                    color: #fff4de;
+                    font: 24px "Raavi";;
+                }
+                .count-article:before {
+                    content: '/';
+                    display: inline-block;
+                }
+
+            .img-article-service {
+                position: absolute;
+                right: 80px;
+                top: 20px;
+            }
+
+        a.link-more-info {
+            display: block;
+            margin: 30px 0 0 20px;
+            color: #49b8f9;
+            font: 13px "NotoSans-Italic";
+            text-decoration: none;
+        }
+        a.link-more-info:hover {
+            color: #2185c5;
+        }
+            a.link-more-info:after {
+                content: '»';
+                display: inline-block;
+                margin-left: 5px;
             }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
@@ -197,8 +312,8 @@ body {
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .footer-home {
-    margin-top: -185px;
     width: 100%;
+    padding-bottom: 20px;
 }
     .scroll-icon {
         display: block;
@@ -394,4 +509,7 @@ body {
 }
 .mar-right-20 {
     margin-right: 20px;
+}
+.mar-bottom-20 {
+    margin-bottom: 20px;
 }
