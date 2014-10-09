@@ -127,13 +127,23 @@ $(document).ready(function(){
     /*end*/
 
     /*number page*/
-    $('.list-article-service li').each(function(i){
-        if(i < 9) {
-            $(this).find('.count-article').text('0' + (i + 1));
-        }
-        else {
-            $(this).find('.count-article').text(1 + i);
-        }
-    });
+    function countNumber(countItems, findItems) {
+        countItems.each(function (i) {
+            if (i < 9) {
+                $(this).find(findItems).text('0' + (i + 1));
+            }
+            else {
+                $(this).find(findItems).text(1 + i);
+            }
+        });
+    }
+
+    var articleService = $('.list-article-service li'),
+        countArticle = '.count-article';
+        countNumber(articleService, countArticle);
+
+    var listBigBox = $('.list-big-block_js li'),
+        countWarranty = '.count-items-warranty';
+        countNumber(listBigBox, countWarranty);
     /*end*/
 });
