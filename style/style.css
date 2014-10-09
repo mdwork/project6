@@ -2,13 +2,14 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:12px Tahoma, sans-serif; background:#fff; color:#000; }
-div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
+body                            { padding:0; margin:0; font:13px "NotoSans-Regular", sans-serif; background:#fff; color:#455e6d; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea,menu {
 	padding:0;
 	margin:0;
 	outline:none;
 	list-style:none;
 }
+p {line-height: 1.6; margin-bottom: 25px}
 select, input, textarea        { font-size:12px; vertical-align:middle; }
 textarea                       { vertical-align:top; }
 :focus                         { outline:none; }
@@ -36,7 +37,6 @@ a:hover                        { text-decoration:none; }
 .align-c                       { text-align:center !important; }
 .clear                         { clear:both; }
 .clearfix:after                { content: ""; display: block; clear: both; visibility: hidden;}
-.clearfix                      { display: inline-block; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FONTS----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -105,7 +105,7 @@ body {
     margin-bottom: -185px;
 }
 .wrapper-inner-page {
-    margin-bottom: -95px;
+    margin-bottom: -121px;
 }
 .empty-box-inner-page,
 .empty-box-home {
@@ -113,7 +113,7 @@ body {
     width: 100%;
 }
 .empty-box-inner-page {
-    height: 95px;
+    height: 121px;
 }
     .bg-big-slider {
         position: absolute;
@@ -266,11 +266,6 @@ body {
                     float: left;
                     margin: 6px 0 0 15px;
                     width: 146px;
-                    color: #2185c5;
-                    font: 13px "PT_Sans-Narrow-Web-Bold";
-                    text-transform: uppercase;
-                    line-height: 2;
-                    letter-spacing: 2px;
                 }
                 .count-article {
                     float: right;
@@ -304,6 +299,120 @@ body {
                 display: inline-block;
                 margin-left: 5px;
             }
+
+    .top-content {
+        overflow: hidden;
+    }
+        .wrap-menu {
+            float: left;
+            width: 220px;
+            margin: 0 20px 20px 0;
+        }
+            .main-content-service {
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
+                .header-black {
+                    position: relative;
+                    z-index: 5;
+                    padding: 0 20px;
+                    font: 16px "PT_Sans-Narrow-Web-Bold";
+                    color: #262626;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    text-align: center;
+                }
+                    .header-black h2 {
+                        position: relative;
+                        z-index: 5;
+                        display: inline-block;
+                        padding: 0 20px;
+                        background: #fff;
+                    }
+                .list-services {
+                    padding: 20px 20px 20px 15px;
+                    margin: -15px 0 0;
+                    border: 4px solid #FFF4DE;
+                }
+                    .list-services li {
+                        margin-bottom: 20px;
+                    }
+                        .list-services li a {
+                            font: 13px "NotoSans-Regular";
+                            text-decoration: none;
+                            color: #49b8f9;
+                        }
+                        .list-services li a:hover {
+                            color: #2185c5;
+                        }
+                        .list-services .active a {
+                            color: #455e6d;
+                        }
+                    .box-foto-service {
+                        position: relative;
+                        margin-left: 50px;
+                    }
+                        .bt-mini-blue {
+                            padding: 7px 12px;
+                            min-width: 150px;
+                            background: #2185C5;
+                            text-transform: uppercase;
+                            color: #fff;
+                            font: 13px "PT_Sans-Narrow-Web-Bold";
+                            border: none;
+                            cursor: pointer;
+                            letter-spacing: 2px;
+                            text-decoration: none;
+                            text-align: center;
+                        }
+                        .bt-mini-blue:hover {
+                            background: #1D75AC;
+                        }
+
+                        .main-definition {
+                            text-transform: uppercase;
+                            color: #000;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                        }
+                    .main-foto-service {
+                        overflow: hidden;
+                        position: relative;
+                        margin: 55px 0 45px;
+                    }
+                        .main-foto-service img {
+                            display: block;
+                        }
+                        .main-foto-service p {
+                            position: relative;
+                            z-index: 5;
+                            float: right;
+                            width: 220px;
+                            padding: 20px;
+                            margin: -80px 60px 0 0;
+                            background: #FFF4DE;
+                            font-size: 12px;
+                            color: #455e6d;
+                        }
+
+                .wrap-vertical-slider {
+                    float: left;
+                    width: 290px;
+                    padding-left: 20px;
+                    margin: 0 30px 50px 40px;
+                    background: url("../images/content/caption.png") no-repeat left bottom;
+                }
+
+            .wrap-parag-mini-slider {
+                padding: 135px 55px 25px;
+                margin: -135px 0 65px;
+                border: 4px solid #FFF4DE;
+            }
+
+    .box-blue {
+        width: 1000px;
+        margin-left: -30px;
+    }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -312,6 +421,7 @@ body {
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .footer-home {
+    overflow: hidden;
     width: 100%;
     padding-bottom: 20px;
 }
@@ -512,4 +622,20 @@ body {
 }
 .mar-bottom-20 {
     margin-bottom: 20px;
+}
+.mar-top-10 {
+    margin-top: 10px;
+}
+.mar-left-75 {
+    margin-left: -75px;
+}
+.width-100 {
+    width: 100%;
+}
+.text-blue-upper {
+    color: #2185c5;
+    font: 13px "PT_Sans-Narrow-Web-Bold";
+    text-transform: uppercase;
+    line-height: 2;
+    letter-spacing: 2px;
 }
