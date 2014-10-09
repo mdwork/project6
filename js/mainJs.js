@@ -48,53 +48,63 @@ $(document).ready(function(){
 
     /*call popup*/
     var callFormHomeHeader = $('#call-back-header'),
-        form = $('#form-header-home');
-    popupWindow(callFormHomeHeader, form);
+        formHeader = $('#form-header-home');
+    popupWindow(callFormHomeHeader, formHeader);
     /*end*/
 
     /*valid email*/
-    form.submit(function(e){
-        var nameValid = $('.input-callback[name^=your-name]'),
-            telValid = $('.input-callback[name^=tel]');
-        if(nameValid.val().length < 6 ||
-           telValid.val().length < 6) {
-            e.preventDefault();
+    function validForm(form, nameForm, submitButton) {
+        form.submit(function (e) {
+            var nameValid = $(nameForm + ' ' + '.input-callback[name^=your-name]'),
+                telValid =  $(nameForm + ' ' + '.input-callback[name^=tel]');
+            if (nameValid.val().length < 6 ||
+                telValid.val().length < 6) {
+                e.preventDefault();
 
-            $('#submit-form-popup_js').css('backgroundColor','#ccc');
-            if(nameValid.val().length < 6) {
-                nameValid.addClass('no-valid-email_js');
-            }
-            if(telValid.val().length < 6) {
-                telValid.addClass('no-valid-email_js');
-            }
-
-            nameValid.blur(function(){
-                if(nameValid.val().length > 5) {
-                    if(telValid.val().length > 5) {
-                        $('#submit-form-popup_js').css('backgroundColor', '#1D75AC');
-                    }
-                    nameValid.removeClass('no-valid-email_js');
-                }
-                else {
-                    $('#submit-form-popup_js').css('backgroundColor','#ccc');
+                submitButton.css('backgroundColor', '#ccc');
+                if (nameValid.val().length < 6) {
                     nameValid.addClass('no-valid-email_js');
                 }
-            });
-            telValid.blur(function(){
-                if(telValid.val().length > 5) {
-                    if(nameValid.val().length > 5) {
-                        $('#submit-form-popup_js').css('backgroundColor', '#1D75AC');
-                    }
-                    telValid.removeClass('no-valid-email_js');
-                }
-                else {
-                    $('#submit-form-popup_js').css('backgroundColor','#ccc');
+                if (telValid.val().length < 6) {
                     telValid.addClass('no-valid-email_js');
                 }
-            });
-        }
 
-    });
+                nameValid.blur(function () {
+                    if (nameValid.val().length > 5) {
+                        if (telValid.val().length > 5) {
+                            submitButton.css('backgroundColor', '#1D75AC');
+                        }
+                        nameValid.removeClass('no-valid-email_js');
+                    }
+                    else {
+                        submitButton.css('backgroundColor', '#ccc');
+                        nameValid.addClass('no-valid-email_js');
+                    }
+                });
+                telValid.blur(function () {
+                    if (telValid.val().length > 5) {
+                        if (nameValid.val().length > 5) {
+                            submitButton.css('backgroundColor', '#1D75AC');
+                        }
+                        telValid.removeClass('no-valid-email_js');
+                    }
+                    else {
+                        submitButton.css('backgroundColor', '#ccc');
+                        telValid.addClass('no-valid-email_js');
+                    }
+                });
+            }
+
+        });
+    }
+    var formName = '#form-header-home',
+        submitButtonHeader = $('#submit-form-popup_js');
+        validForm(formHeader, formName, submitButtonHeader);
+
+    var formNameInner = '#form-inner-page',
+        submitButtonInnerPage = $('#submit-form-popup-inner_js'),
+        formInner = $('#form-inner-page');
+        validForm(formInner, formNameInner, submitButtonInnerPage);
     /*end*/
 
     /* Placeholder for IE */
