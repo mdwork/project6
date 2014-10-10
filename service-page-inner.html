@@ -17,14 +17,6 @@
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-
-
-    <style>
-        /* Overall & panel width defined using css in MovingBoxes version 2.2.2+ */
-        #slider-one { width: 900px; }
-        #slider-one > li { width: 300px; }
-    </style>
 </head>
 
 <body class="inner-page">
@@ -138,7 +130,20 @@
 
                     <div class="clearfix">
                         <div class="wrap-vertical-slider">
-                            <img class="display" src="images/content/slider_foto.png" alt="foto">
+                            <div id="slider5">
+                                <a class="buttons prev" href="#"></a>
+                                <div class="viewport">
+                                    <ul class="overview">
+                                        <li><img src="images/content/slider_foto.png" alt="image 3" /></li>
+                                        <li><img src="images/content/slider_foto.png" alt="image 2" /></li>
+                                        <li><img src="images/content/slider_foto.png" alt="image 1" /></li>
+                                        <li><img src="images/content/slider_foto.png" alt="image 3" /></li>
+                                        <li><img src="images/content/slider_foto.png" alt="image 2" /></li>
+                                        <li><img src="images/content/slider_foto.png" alt="image 1" /></li>
+                                    </ul>
+                                </div>
+                                <a class="buttons next" href="#"></a>
+                            </div>
                         </div>
 
                         <span class="text-blue-upper">Наиболее важным направлением деятельности нашей компании являются
@@ -357,6 +362,16 @@
             $('#slider-one').movingBoxes({
                 reducedSize  : 0.5
            });
+        });
+    </script>
+
+    <script type="text/javascript" src="js/jquery.tinycarousel.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#slider5").tinycarousel({
+                axis   : "y"
+            });
         });
     </script>
 </body>

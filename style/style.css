@@ -631,7 +631,65 @@ body {
             color: #7ecefd;
             text-transform: uppercase;
         }
+/*-----slider5-------*/
+#slider5 { position: relative; height: 1%; width: 260px; margin: 0 auto; }
+#slider5 .viewport { width: 260px; height: 180px; overflow: hidden; position: relative; }
+#slider5 .buttons {
+    display: block;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#slider5 .next {
+    right: -35px;
+    border: 2px solid #2185C5;
+    padding: 0;
+}
 
+#slider5 .next:after {
+    content: '\02C5';
+    display: block;
+    font: bold 24px monospace;
+    line-height: 10px;
+    color: #2185C5;
+    margin: 13px 5px 0px 6px;
+}
+#slider5 .prev {
+    right: -35px;
+    margin-top: -40px;
+    border: 2px solid #2185C5;
+    padding: 0;
+}
+#slider5 .prev:after {
+    content: '\02C4';
+    display: block;
+    font: bold 24px monospace;
+    line-height: 11px;
+    color: #2185C5;
+    margin: 12px 5px 0 6px;
+}
+#slider5 .buttons:hover{
+    color: #C01313;
+    background: #fff;
+}
+#slider5 .overview {
+    top: -720px;
+    list-style: none;
+    position: absolute;
+    width: 260px;
+}
+#slider5 .overview li{
+    float: left;
+    height: 180px;
+    width: 260px;
+}
+#slider5 .disable,
+#slider5 .disable:after,
+#slider5 .disable:before {
+    border-color: #ccc;
+    color: #ccc;
+}
 /*----------popup------------*/
 #bg-popup {
     display: none;
