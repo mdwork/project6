@@ -18,7 +18,6 @@ $(document).ready(function(){
                 scrollTop = window.pageYOffset;
 
             fotoPopup.css({
-                'top': scrollTop + $(window).height() / 5,
                 'left': '50%',
                 'margin-left': - (fotoInPopupW / 2)
             });
@@ -33,7 +32,6 @@ $(document).ready(function(){
 
                 fotoPopup.css({
                     'opacity' : 0,
-                    'top': 0,
                     'left': 0,
                     'margin-left': 0
                 });

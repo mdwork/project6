@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Главная</title>
+    <title>Контакты</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Resource-type" content="Document" />
 
@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div class="map"></div>
     <div class="wrapper">
         <header class="header">
             <h1 class="main-logo float-l">
@@ -58,82 +59,39 @@
             </nav>
         </header><!--end HEADER-->
 
+        <div class="wrap-vertical-center">
+            <div class="box-vertical-center">
+                <h1 class="header-contact">Контакты</h1>
+
+                <div class="box-contacts">
+                    <div class="wrap-contact">
+                        <dl class="block-contact">
+                            <dt>Адрес</dt>
+                            <dd>236008 г.Калининград,<br>
+                                ул. Лёни Голикова, 22</dd>
+                        </dl>
+
+                        <dl class="block-contact">
+                            <dt>Телефон</dt>
+                            <dd>+7 4012 36-33-22 (многоканальный)</dd>
+                            <dd>+7 4012 36-56-00 (факс)</dd>
+                        </dl>
+
+                        <dl class="block-contact">
+                            <dt>Электропочта</dt>
+                            <dd><a href="mailto:hello@glavremstroy.ru">hello@glavremstroy.ru</a></dd>
+                        </dl>
+                    </div><!--end WRAP-CONTACT-->
+                </div><!--end BOX-CONTACT-->
+            </div><!--end BOX-VERTICAL-CENTER-->
+        </div><!--end WRAP-VERTICAL-CENTER-->
+
         <div class="empty-box-home"></div>
     </div><!--end WRAPPER-->
 
     <footer class="footer-home">
-        <span class="scroll-icon">Пользуйтесь скроллом</span>
         <span class="copyright-home">&copy; ООО "СК ГлавРемСтрой", 2006-2014</span>
     </footer>
-
-    <!--SLIDER-FULL-WINDOW-->
-    <ul id="menu">
-        <li data-menuanchor="firstPage" class="active"><a href="#firstPage"></a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage"></a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage"></a></li>
-        <li data-menuanchor="4thpage"><a href="#4thpage"></a></li>
-    </ul>
-
-
-    <div id="fullpage">
-        <div class="section" id="section0">
-            <div class="overlay"></div>
-            <img class="bg-big-slider" src="images/slide1.jpg" alt="slider1">
-
-            <div class="wrapper-slider">
-                <div class="box-main-header">
-                    <h2 class="header-company">ООО "ГлавРемСтрой"</h2>
-                    <span class="sub-header-company">Строим, ремонтируем и обслуживаем от души</span>
-                </div>
-            </div><!--end WRAPPER-SLIDER-->
-        </div><!--end SECTION0-->
-
-        <div class="section" id="section1">
-            <div class="overlay"></div>
-            <img class="bg-big-slider" src="images/slide2.jpg" alt="slider2">
-
-            <div class="wrap-inner-slider">
-                <div class="box-inner-header">
-                    <div class="wrap-foto-slider-home">
-                        <img src="images/image1.png" alt="images1">
-                        <a href="service-page.html" type="button" class="bt-callback-blue bt-position-center">Подробнее</a>
-                    </div>
-                    <header class="header-inner-slider">Строительство очистных сооружений</header>
-                </div>
-            </div><!--end WRAP-INNER-SLIDER-->
-        </div><!--end SECTION1-->
-
-        <div class="section" id="section2">
-            <div class="overlay"></div>
-            <img class="bg-big-slider" src="images/slide3.jpg" alt="slider3">
-
-            <div class="wrap-inner-slider">
-                <div class="box-inner-header">
-                    <div class="wrap-foto-slider-home">
-                        <img src="images/image2.png" alt="images2">
-                        <a href="service-page.html" type="button" class="bt-callback-blue bt-position-center">Подробнее</a>
-                    </div>
-                    <header class="header-inner-slider">Строительство водопровода</header>
-                </div>
-            </div><!--end WRAP-INNER-SLIDER-->
-        </div><!--end SECTION2-->
-
-        <div class="section" id="section3">
-            <div class="overlay"></div>
-            <img class="bg-big-slider" src="images/slide4.jpg" alt="slider4">
-
-            <div class="wrap-inner-slider">
-                <div class="box-inner-header">
-                    <div class="wrap-foto-slider-home">
-                        <img src="images/image3.png" alt="images3">
-                        <a href="service-page.html" type="button" class="bt-callback-blue bt-position-center">Подробнее</a>
-                    </div>
-                    <header class="header-inner-slider">Строительство канализации</header>
-                </div>
-            </div><!--end WRAP-INNER-SLIDER-->
-        </div><!--end SECTION3-->
-    </div>
-    <!--end SLIDER-FULL-WINDOW-->
 
     <div id="bg-popup">
         <div id="box-popup">
@@ -154,20 +112,6 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="js/examples.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-                menu: '#menu'
-            });
-
-        });
-    </script>
     <script type="text/javascript" src="js/mainJs.js"></script>
 </body>
 </html>

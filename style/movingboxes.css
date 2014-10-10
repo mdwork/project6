@@ -71,24 +71,24 @@ a.mb-scrollButtons.mb-left {
 	left: 250px;
     z-index: 999;
     border: 2px solid #2185C5;
-    padding: 2px 4px 3px 6px;
+    padding: 5px 4px 6px 6px;
 }
 a.mb-scrollButtons.mb-left:after {
     content: '<';
     display: block;
-    font: bold 18px monospace;
+    font: bold 18px Verdana, sans-serif;
     line-height: 15px;
     color: #2185C5;
 }
 a.mb-scrollButtons.mb-right {
 	right: 250px;
     border: 2px solid #2185C5;
-    padding: 2px 4px 3px 6px;
+    padding: 5px 4px 6px 6px
 }
 a.mb-scrollButtons.mb-right:after {
     content: '>';
     display: block;
-    font: bold 18px monospace;
+    font: bold 18px Verdana, sans-serif;
     line-height: 15px;
     color: #2185C5;
 }
