@@ -18,7 +18,7 @@ $(document).ready(function(){
                 scrollTop = window.pageYOffset;
 
             fotoPopup.css({
-                'top': scrollTop + 200,
+                'top': scrollTop + $(window).height() / 5,
                 'left': '50%',
                 'margin-left': - (fotoInPopupW / 2)
             });
@@ -47,9 +47,9 @@ $(document).ready(function(){
     /*end*/
 
     /*call popup*/
-    var callFormHomeHeader = $('#call-back-header'),
+    var callFormVacancy = $('.call-popup_js'),
         formHeader = $('#form-header-home');
-    popupWindow(callFormHomeHeader, formHeader);
+    popupWindow(callFormVacancy, formHeader);
     /*end*/
 
     /*valid email*/
@@ -155,5 +155,9 @@ $(document).ready(function(){
     var listBigBox = $('.list-big-block_js li'),
         countWarranty = '.count-items-warranty';
         countNumber(listBigBox, countWarranty);
+
+    var listVacancy = $('.list-vacancy li'),
+        countVacancy = '.count-vacancy';
+        countNumber(listVacancy, countVacancy);
     /*end*/
 });

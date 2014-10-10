@@ -168,6 +168,9 @@ body {
             display: inline-block;
             margin: 0 14px;
         }
+        .main-nav-inner li:first-child {
+            margin-left: 0;
+        }
             .main-nav li a,
             .main-nav-inner li a {
                 color: #fff;
@@ -515,6 +518,174 @@ body {
             font: 30px "PT_Sans-Narrow-Web-Bold";
         }
 
+.top-banner {
+    height: 350px;
+    padding: 70px 30px 0;
+    background: url("../images/content/top_banner.jpg") no-repeat;
+}
+    .text-banner {
+        float: left;
+        margin-top: 60px;
+    }
+        .header-banner {
+            display: block;
+            width: 420px;
+            margin-bottom: 13px;
+            font: 36px "PT_Sans-Narrow-Web-Bold";
+            color: #fff;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+        .text-banner .description {
+            width: 455px;
+            display: block;
+            font: 18px "NotoSans-Italic";
+            color: #fff;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+        }
+
+    .wrap-menu-vacancy {
+        float: right;
+    }
+        .wrap-menu-vacancy header {
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+            .wrap-menu-vacancy h2 {
+                position: relative;
+                z-index: 5;
+                padding: 0 15px;
+                font: 16px "PT_Sans-Narrow-Web-Bold";
+            }
+        .menu-vacancy {
+            position: relative;
+            width: 185px;
+            margin-top: -11px;
+            padding: 25px 15px 0;
+            border: 4px solid #A5ABAF;
+            border-top: none;
+        }
+            .menu-vacancy:before,
+            .menu-vacancy:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -4px;
+                display: block;
+                width: 55px;
+                border-top: 4px solid #A5ABAF;
+            }
+            .menu-vacancy:after {
+                right: -4px;
+                left: auto;
+            }
+            .menu-vacancy li {
+                margin-bottom: 22px;
+            }
+                .menu-vacancy li a {
+                    font: 13px "NotoSans-Regular";
+                    color: #49b8f9;
+                    text-decoration: none;
+                }
+                .menu-vacancy li a:hover {
+                    color: #2185c5;;
+                }
+                .rubl {
+                    text-decoration: line-through;
+                    font-family: futura;
+                }
+
+    .list-vacancy {
+        overflow: hidden;
+    }
+        .list-vacancy > li {
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+            .wrap-vacancy {
+                float: left;
+                width: 694px;
+            }
+                .count-vacancy {
+                    position: relative;
+                    z-index: 5;
+                    float: left;
+                    padding: 40px 20px 25px 22px;
+                    margin: 0 15px 0 60px;
+                    background: #FFF4DE;
+                    color: #455e6d;
+                    font: 48px "Raavi";
+                    line-height: 48px;
+                }
+                .count-vacancy:before {
+                    content: '/';
+                    display: inline-block;
+                }
+                .header-vacancy {
+                    float: left;
+                    margin-top: 15px;
+                }
+                    .header-vacancy h1 {
+                        text-transform: uppercase;
+                        color: #2185c5;
+                        font: 18px "PT_Sans-Narrow-Web-Bold";
+                        letter-spacing: 2px;
+                    }
+                .box-vacancy {
+                    position: relative;
+                    padding: 105px 25px 55px 0;
+                    margin-top: -50px;
+                    border: 3px solid #FFF4DE;
+                }
+                    .wage {
+                        position: absolute;
+                        top: 18px;
+                        left: 200px;
+                        color: #262626;
+                        font: 14px "NotoSans-Italic";
+                    }
+                    .list-feature {
+                        margin: 0 0 30px 30px;
+                    }
+                        .list-feature dt {
+                            margin: 0 0 10px 30px;
+                            font: 13px "PT_Sans-Narrow-Web-Bold";
+                            color: #262626;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                        }
+                        .list-feature dd {
+                            position: relative;
+                            margin-bottom: 10px;
+                            padding-left: 30px;
+                        }
+                        .list-feature dd:before {
+                            content: '';
+                            position: absolute;
+                            top: 7px;
+                            left: 0;
+                            display: block;
+                            width: 5px;
+                            height: 5px;
+                            background: #2185C5;
+
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            border-radius: 5px;
+                        }
+                    .box-vacancy .bt-callback-blue {
+                        margin: 0 0 0 60px;
+                    }
+                        .list-vacancy .wrap-menu-vacancy {
+                            margin-top: 55px;
+                        }
+                            .list-vacancy .wrap-menu-vacancy h2 {
+                                color: #262626;
+                            }
+
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -607,6 +778,7 @@ body {
             }
             .bt-callback-blue,
             a.bt-callback-blue {
+                display: inline-block;
                 padding: 10px 20px;
                 min-width: 150px;
                 background: #2185C5;
