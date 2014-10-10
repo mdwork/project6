@@ -38,41 +38,57 @@ change .current class name using plugin option, currentPanel : 'current' */
 .mb-slider .mb-panel.current {
 	cursor: auto;
 }
-
+.mb-inside {
+    position: relative;
+}
 .mb-inside * {
 	max-width: 100%;
 }
-
+.mb-inside img {
+    width: 300px;
+    min-height: 117px;
+}
+.mb-inside .overview {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+}
+.mb-panel.current .overview {
+    display: none;
+}
 /*** Left & Right Navigation Arrows ***/
 a.mb-scrollButtons {
 	display: block;
 	position: absolute;
-	top: 50%;
-	margin-top: -29px; /* if you change the arrow images, you may have to adjust this (1/2 height of arrow image) */
+	top: 38px;
 	cursor: pointer;
 	text-decoration: none;
 }
 a.mb-scrollButtons.mb-left {
-	left: -45px;
+	left: 250px;
+    z-index: 999;
     border: 2px solid #2185C5;
-    padding: 4px 5px;
+    padding: 2px 4px 3px 6px;
 }
 a.mb-scrollButtons.mb-left:after {
     content: '<';
     display: block;
-    font: bold 24px monospace;
+    font: bold 18px monospace;
     line-height: 15px;
     color: #2185C5;
 }
 a.mb-scrollButtons.mb-right {
-	right: -45px;
+	right: 250px;
     border: 2px solid #2185C5;
-    padding: 4px 5px;
+    padding: 2px 4px 3px 6px;
 }
 a.mb-scrollButtons.mb-right:after {
     content: '>';
     display: block;
-    font: bold 24px monospace;
+    font: bold 18px monospace;
     line-height: 15px;
     color: #2185C5;
 }
@@ -96,9 +112,46 @@ a.mb-scrollButtons.disabled {
 }
 #slider-one > li {
     position: relative;
-    top: 45px;
+    top: 40px;
     width: 300px;
+    padding-top: 100px;
+    padding-bottom: 55px;
 }
 .mb-panel.current {
     top: 0 !important;
+}
+.mb-panel h3,
+.mb-panel .link-all-object {
+    display: none;
+}
+.mb-panel.current .link-all-object {
+    display: block;
+    position: absolute;
+    bottom: -55px;
+    left: 62px;
+    width: 175px;
+    padding: 7px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #455e6d;
+    background: #fff4de;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.mb-panel.current .link-all-object:hover {
+    background: #FFE9BE;
+}
+.mb-panel.current h3 {
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: 23px;
+    width: 270px;
+    font: 13px "PT_Sans-Narrow-Web-Bold";
+    color: #49b8f9;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.7;
 }
