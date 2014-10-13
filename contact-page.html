@@ -67,6 +67,12 @@
             //Определяем область показа маркеров
             var latlngbounds = new google.maps.LatLngBounds();
 
+            var image = new google.maps.MarkerImage( 'images/cursor.png',
+            new google.maps.Size(84,56), // размеры иконок
+            new google.maps.Point(0,0),
+            new google.maps.Point(7,36)
+        );
+
             for (var i = 0; i < places.length; i++) {
                 var myLatLng = new google.maps.LatLng(locations[i][1], locations[i][2]);
                 //Добавляем координаты маркера в область
@@ -74,6 +80,7 @@
                 var marker = new google.maps.Marker({
                     position: myLatLng,
                     map: map,
+                    icon: image,
                     title: locations[i][0]
                 });
             }
