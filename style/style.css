@@ -781,7 +781,7 @@ body {
         margin-bottom: 30px;
         padding: 58px 0;
         color: #fff;
-        background: url("../images/footer/scroll_icon.png") no-repeat center;
+        background: url("../images/footer/scroll_icon.png") no-repeat 103px 0;
         font: 13px "PT_Sans-Narrow-Web-Regular";
         opacity: 0.6;
         text-align: center;
@@ -820,7 +820,7 @@ body {
         .sub-header-company {
             display: block;
             text-align: center;
-            font: 24px "PT_Sans-Narrow-Web-Bold";
+            font: 24px "NotoSans-Regular";
             color: #fff;
         }
 .wrap-inner-slider {
@@ -856,7 +856,6 @@ body {
             }
             .bt-callback-blue,
             a.bt-callback-blue {
-                display: inline-block;
                 padding: 10px 20px;
                 min-width: 150px;
                 background: #2185C5;
@@ -953,6 +952,9 @@ body {
     border-color: #ccc;
     color: #ccc;
 }
+.sc-selected h3 {
+    font: 13px "PT_Sans-Narrow-Web-Bold";;
+}
 /*----------popup------------*/
 #bg-popup {
     display: none;
@@ -961,7 +963,6 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
 }
 #box-popup {
     position: fixed;
@@ -989,6 +990,7 @@ body {
     color: #fff;
     font: 11px "PT_Sans-Narrow-Web-Bold";
     opacity: 0.6;
+    filter: alpha(opacity=60);
     text-transform: uppercase;
     cursor: pointer;
     letter-spacing: 1px;
@@ -1084,16 +1086,45 @@ body {
 .bg-green {
     background: #F3FFE9;
 }
-
-.mb-panel.current img {
-    width: 300px;
-    height: 200px;
-    max-width: none;
-    display: block;
-}
-.mb-panel img {
-    display: block;
-}
-.mb-panel.current .link-all-object {
+a.link-all-object {
+    width: 175px;
+    padding: 8px 0;
     font: 14px "PT_Sans-Narrow-Web-Bold";
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #455e6d;
+    background: #FFF4DE;
+    text-align: center;
+    left: 20%;
+    margin-top: 25px;
+}
+a.link-all-object:hover {
+    background: #FFE9BE;
+ }
+.sky-carousel-container .overview {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    background: #000;
+}
+.sc-selected .overview {
+    display: none;
+}
+#bg-popup .overview {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

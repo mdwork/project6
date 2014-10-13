@@ -8,7 +8,7 @@ $(document).ready(function(){
                 fotoPopup = $('#box-popup');
 
             bgPopup.addClass('show_js');
-            fotoPopup.prepend('<header class="header-form-callback">Заказать услуги</header><span class="icon-close_js">Закрыть X</span>')
+            fotoPopup.prepend('<header class="header-form-callback">Заказать обратный звонок</header><span class="icon-close_js">Закрыть X</span>')
                      .animate({'opacity': 1}, 500);
             showCurrentForm.addClass('show_js');
 
