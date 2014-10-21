@@ -158,4 +158,41 @@ $(document).ready(function(){
         countVacancy = '.count-vacancy';
         countNumber(listVacancy, countVacancy);
     /*end*/
+
+    /*dinamik menu*/
+
+    $(document).scroll(function(){
+        var scrollHeight = $(document).scrollTop(),
+            boxMenu = $('.wrap-menu-vacancy');
+        if(scrollHeight > 499 && !boxMenu.hasClass('pos-menu')) {
+            boxMenu.addClass('pos-menu')
+                .css({
+                    'opacity':'0'
+                }).animate({
+                    'opacity':'1'
+                },700);
+        }
+        else if (scrollHeight < 500) {
+            if(boxMenu.hasClass('pos-menu')) {
+                boxMenu.removeClass('pos-menu');
+            }
+        }
+    });
+
+    $('.show-more-vacancy_js').on('click', function(e){
+        e.preventDefault();
+
+        var boxMenu = $('.wrap-menu-vacancy');
+        boxMenu.addClass('pos-menu')
+            .css({
+                'opacity':'0'
+            }).animate({
+                'opacity':'1'
+            },700);
+
+        $('html, body').animate({
+            scrollTop: 500
+        }, 500);
+    });
+    /*end*/
 });
